@@ -1,0 +1,12 @@
+extends layout.pug
+block splash
+  div.splash
+    h1.splash-head Fishy Feeder
+    p.splash-subhead Welcome to Fishy Feeder where you can feed my fish!
+    ul#home-btns
+      li
+        a.pure-button.pure-button-primary(href="/schedule") View Schedule
+      li.right
+        img#hungry-fish-home(src='/pictures/hungry_fish.png')
+      li.right
+        a.pure-button.pure-button-primary(href="/feeder") Feed My Fish

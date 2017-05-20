@@ -1,0 +1,41 @@
+doctype
+html(lang="en")
+  head
+    title Fishy Feeder - #{title}
+    meta(charset="utf=8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="/js/jquery-2.0.3.min.js")
+    script(src="/js/interface.js")
+    link(rel='stylesheet', href='https://unpkg.com/purecss@0.6.2/build/pure-min.css')
+    link(rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/grids-responsive-min.css")
+    link(rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css")
+    link(rel='stylesheet', href='/css/style.css')
+    block scripts
+      script(src="/js/jquery-2.0.3.min.js")
+      script(src="/js/interface.js")
+  body
+    div.header
+      div.home-menu.pure-menu.pure-menu-horizontal.pure-menu-fixed
+        a.pure-menu-heading(href="/") Fishy Feeder
+        ul.pure-menu-list
+          li.pure-menu-item.pure-menu-selected
+            a.pure-menu-link(href="/") Home
+          li.pure-menu-item
+            a.pure-menu-link(href="/feeder") Feed Fish
+          li.pure-menu-item
+            a.pure-menu-link(href="/schedule") Feeding Schedule
+          li.pure-menu-item
+            a.pure-menu-link(href="/about") About Us
+
+    if showSplash === true
+      div.splash-container
+        block splash
+
+    if showContent === true
+      div.content-wrapper
+        block content
+
+    block foot
+      div.footer.l-box.is-center
+        ul
+          li &copy; 2017
